@@ -51,7 +51,7 @@ Vagrant.configure("2") do |config|
   end
   config.vm.define 'linuxnode1', primary: false do |linuxnode1|
       linuxnode1.vm.box = "ubuntu/xenial64"
-      chef13.vm.network :private_network, ip: '33.33.33.31'
+      linuxnode1.vm.network :private_network, ip: '33.33.33.31'
   end
 
 end

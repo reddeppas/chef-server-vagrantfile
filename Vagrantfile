@@ -37,9 +37,9 @@ SCRIPT
 
 Vagrant.configure("2") do |config|
 
-  config.vm.define 'chef13', primary: true do |chef12|
+  config.vm.define 'chef13', primary: true do |chef13|
     chef13.vm.network "forwarded_port", guest: 80, host: 8080
-    chef13.vm.hostname = 'dev-chef12-linux'
+    chef13.vm.hostname = 'dev-chef13-linux'
     chef13.vm.network :private_network, ip: '33.33.33.30'
     chef13.vm.box = "ubuntu/xenial64"
     chef13.vm.provider 'virtualbox' do |vb|
@@ -51,6 +51,7 @@ Vagrant.configure("2") do |config|
   end
   config.vm.define 'linuxnode1', primary: false do |linuxnode1|
       linuxnode1.vm.box = "ubuntu/xenial64"
+      chef13.vm.network :private_network, ip: '33.33.33.31'
   end
 
 end

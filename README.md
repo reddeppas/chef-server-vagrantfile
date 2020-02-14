@@ -9,6 +9,9 @@
   ```
   bootstrap node to chefserver
   
-  knife bootstrap \<ip-address\> --ssh-user \<vagrant\> --sudo --ssh-identity-file \<vagrant private key file location\> --node-name \<node-name\> --run-list \<runlist\> 
+  ```
+  knife bootstrap \<ip-address\> --ssh-user \<vagrant\> --sudo --ssh-identity-file \<vagrant private key file location\> --     node-name \<node-name\> --run-list \<runlist\> 
   
   for self signed certificates use --node-ssl-verify-mode none
+  
+  ```
